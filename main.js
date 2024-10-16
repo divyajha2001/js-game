@@ -7,7 +7,7 @@ class Game{
         this.Player=new Player(this);
         this.baseHeight=720;
         this.ratio=this.height/this.baseHeight;
-        this.background=new background(this);
+        this.background=new Background(this);
         this.player=new Player(this);
         this.gravity;
 
