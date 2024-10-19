@@ -11,7 +11,7 @@ class Background {
     }
     update() {
         this.x -= this.game.speed;
-        if (this.x <= -this.scalewidth) this.x = 0;
+        if (this.x <= -this.scaleWidth) this.x = 0;
 
     }
     draw() {
@@ -19,7 +19,7 @@ class Background {
         this.game.ctx.drawImage(this.image, this.x + this.scaleWidth, 0, this.scaleWidth, this.scaleHeight);
         2,0,this.scaleWidth,this.scaleHeight
         if (this.game.canvas.Width >= this.image, this.x + this.scaleWidth ){
-            this.game.ctx.drawImage(this.image, this.x + this.scaleWidth * 2 - 2, 0,this.scaleWidth,scaleHeight);
+            this.game.ctx.drawImage(this.image, this.x + this.scaleWidth * 2 - 2, 0,this.scaleWidth,this.scaleHeight);
         }
     }
     resize() {

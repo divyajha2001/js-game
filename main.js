@@ -22,11 +22,13 @@ class Game {
         //mouse controls
         this.canvas.addEventListener('mousedown', e => {
             this.player.flap();
+            console.log("down")
         });
         //keyboard controls
         window.addEventListener('keydown', e => {
             if (e.key == ' ' || e.key === 'Enter') (
                 this.player.flap());
+                console.log("key pressed")
 
             console.log('click')
         });
@@ -61,13 +63,16 @@ class Game {
         this.obstacles.forEach(obstacle => {
             obstacle.update();
             obstacle.draw();
+        })
     }
+
+
     createObstacles() {
         this.obstacles = [];
         const firstX = this.baseHeight * this.ratio;
         const obstacleSpacing = 600 * this.ratio;
         for (let i = 0; i < this.numberOfObstacles; i++) {
-            this.obstacles.push(new obstacleSpacing(this, firstX + i * obstacleSpacing));
+            this.obstacles.push(new Obstacle(this, firstX + i * obstacleSpacing));
         }
 
 
