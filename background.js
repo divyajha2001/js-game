@@ -17,6 +17,10 @@ class Background {
     draw() {
         this.game.ctx.drawImage(this.image, this.x, 0, this.scaleWidth, this.scaleHeight);
         this.game.ctx.drawImage(this.image, this.x + this.scaleWidth, 0, this.scaleWidth, this.scaleHeight);
+        2,0,this.scaleWidth,this.scaleHeight
+        if (this.game.canvas.Width >= this.image, this.x + this.scaleWidth ){
+            this.game.ctx.drawImage(this.image, this.x + this.scaleWidth * 2 - 2, 0,this.scaleWidth,scaleHeight);
+        }
     }
     resize() {
         this.scaleWidth = this.width * this.game.ratio;

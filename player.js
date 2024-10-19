@@ -42,8 +42,10 @@ class Player{
     }
     flap(){
         if(!this.isTouchingTop()){
-            console.log(this.flapspeed)
             this.speedY = -this.flapspeed;
+            console.log(this.flapspeed)
+            console.log(this.speedY)
+            
 
         }
     }
